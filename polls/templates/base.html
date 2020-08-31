@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Polls</title>{% endblock %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+      html, body {
+        font-family: Palatino, "Palatino Linotype", "Book Antiqua", "Hoefler Text", Georgia, "Lucida Bright", Cambria, Times, "Times New Roman", serif;
+        font-size: 14px;
+        background: #f8f8f8;
+        color: #0C3C26;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        padding: .5rem 0;
+        background: #0C4B33;
+        color: #fff;
+        width: 100%;
+      }
+
+      header h1 {
+        margin-left: .5rem;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+      }
+
+      header h1 i {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        color: #44B78B;
+      }
+
+      nav {
+        background: #44B78B;
+        width: 100%;
+        padding: .5rem 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 4px solid #0C4B33;
+      }
+
+      nav a {
+         color: #fff !important;
+         margin-left: .5rem;
+      }
+  </style>
+
+</head>
+<body>
+  <header>
+      <h1>Django app - <i>Warning! Very powerful app.</i></h1>
+  </header>
+  <nav>
+    <a href="{% url 'polls:index' %}">Polls</a>
+  </nav>
+  <div class="container">
+  {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
